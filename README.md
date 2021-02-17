@@ -7,7 +7,9 @@ Repository containing adsorption isotherm data from
 by A. J. Brown
 
 A Thesis submitted for the degree of Doctor of Philosophy
+
 University of Bristol
+
 October 1963.
 
 Contents:
