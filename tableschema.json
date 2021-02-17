@@ -1,0 +1,79 @@
+{
+  "fields": [
+    {
+      "name": "run_id",
+      "type": "int",
+      "description": "Identifier of measurement block"
+    },
+    {
+      "name": "segment",
+      "type": "int",
+      "description": "Identifier of segment in sequence of measurement blocks"
+    },
+    {
+      "name": "run_description",
+      "type": "string",
+      "description": "Description of the run or a group of segments"
+    },
+    {
+      "name": "segment_description",
+      "type": "string",
+      "description": "Description of the segment"
+    },
+    {
+      "name": "adsorbent",
+      "type": "string",
+      "description": "Name of the Adsorbent Material"
+    },
+    {
+      "name": "adsorbate",
+      "type": "string",
+      "description": "Name of the Adsorbate Species"
+    },
+    {
+      "name": "temperature_units",
+      "type": "string",
+      "description": "Units of temperature; K = Kelvin, C = Celsius"
+    }
+    {
+      "name": "temperature",
+      "type": "number",
+      "description": "Temperature of the measurement in Kelvin units"
+    },
+    {
+      "name": "pressure_units",
+      "type": "string",
+      "description": "Units of pressure measurements. Acceptable values: log10(mmHg), mmHg, relative"
+    },
+    {
+      "name": "adsorption_units",
+      "type": "string",
+      "description": "Units of adsorption measurements"
+    },
+    {
+      "name": "pressure",
+      "type": "number",
+      "description": "Pressure measurement"
+    },
+    {
+      "name": "adsorption",
+      "type": "number",
+      "description": "Adsorption measurement"
+    },
+    {
+      "name": "uncertainty",
+      "type": "number",
+      "description": "Uncertainty in final digit of adsorption measurement"
+    },
+    {
+      "name": "branch",
+      "type": "string",
+      "description": "Identifier for isotherm branch. Either 'A' (adsorption) or 'D' (desorption)""
+    },
+    {
+      "name": "notes",
+      "type": "string",
+      "description": "Comments, either taken from original data or editorial notes"
+    }
+  ]
+}
