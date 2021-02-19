@@ -47,11 +47,11 @@ def NIST_ISODB_isotherm(input_isotherm):
     adsorbate_JSON = requests.get(URL).json()
     #pprint.pprint(adsorbate_JSON)
 
-    output_isotherm['temperature'] = input_isotherm['temperature']
+    output_isotherm['temperature'] = Decimal(input_isotherm['temperature'])
     output_isotherm['pressureUnits'] = input_isotherm['pressureUnits']
     output_isotherm['adsorptionUnits'] = input_isotherm['adsorptionUnits']
     output_isotherm['adsorbent'] = adsorbent_JSON
-    output_isotherm['adsorbate'] = adsorbate_JSON
+    output_isotherm['adsorbates'] = [adsorbate_JSON]
 
     isotherm_block = []
     for measurement in input_isotherm['isotherm_data']:
@@ -74,10 +74,13 @@ def NIST_ISODB_isotherm(input_isotherm):
     output_isotherm['category'] = 'exp'
     output_isotherm['compositionType'] = 'molefraction'
     output_isotherm['digitizer'] = 'Daniel W. Siderius'
+    output_isotherm['isotherm_type'] = 'excess'
     output_isotherm['articleSource'] = ''
     output_isotherm['tabular'] = 1
     output_isotherm['DOI'] = ''
     output_isotherm['filename'] = ''
+    output_isotherm['concentrationUnits'] = ''
+    output_isotherm['date'] = '2021-02-19'
 
     #pprint.pprint(output_isotherm)
     #json_writer('isodb_output.json', output_isotherm)
