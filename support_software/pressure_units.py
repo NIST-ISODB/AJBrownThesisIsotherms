@@ -17,3 +17,8 @@ def torr_conversion(units):
     else:
         raise ValueError('Unknown pressure units for output:', units)
     return conversion_factor
+
+
+def bar_conversion(units):
+    """Function to provide conversion from bar to other pressure units"""
+    return torr_conversion(units) * 760. / 1.01325

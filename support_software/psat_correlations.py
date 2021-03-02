@@ -3,15 +3,16 @@
 # pylint: disable-msg=invalid-name   #because I use snake_case
 # pylint: disable-msg=no-else-return
 
-from .pressure_units import torr_conversion
+from .pressure_units import torr_conversion, bar_conversion
 
 
 def xenon_psat(T, output_units='bar'):
     """
-        Compute the Vapor-Solid Equilibrium Pressure of Xenon
+        Compute the Vapor-(Solid/Liquid) Equilibrium Pressure of Xenon
         Valid Temperature Ranges:
            Solid-Vapour: 110 K < T < 160.56 K
            Liquid-Vapour: 160.56 K < T < 166.2 K
+           Liquid-Vapour: 161.70 K < T < 184.70 K
         T: Temperature in Kelvin
         output_units: specify mmHg, bar, atm, Pa, or kPa
 
@@ -22,21 +23,35 @@ def xenon_psat(T, output_units='bar'):
         log_10(p_sat/mmHg) = 7.2488 - 720.7/(T/K)
 
         Reference: M.P. Freeman and G.D. Halsey, J. Phys. Chem. 1956, 60(8), 1119–1125.
-    """
 
-    conversion_factor = torr_conversion(output_units)
+        161.70 K < T < 184.70 K
+
+        log_10(p_sat/bar) = 3.80675 - 577.661/(T/K-13.0)
+
+        Reference: A. Michels and T. Wassenaar, Physica (Amsterdam), 1950, 16, 3, 253-256.
+        Antoine coefficients were determined by NIST from data in referenced article and supplied
+        by the NIST Chemistry WebBook (https://webbook.nist.gov/cgi/cbook.cgi?ID=C7440633)
+        on March 2, 2021.
+    """
 
     # Antoine Correlation
     if 110. < T < 160.56:
+        conversion_factor = torr_conversion(output_units)
         logPsat = 7.7371 - 799.1 / float(T)
         Psat = (10.**logPsat) * conversion_factor
         return Psat
     elif 160.56 < T < 166.2:
+        conversion_factor = torr_conversion(output_units)
         logPsat = 7.24881 - 720.7 / float(T)
         Psat = (10.**logPsat) * conversion_factor
         return Psat
+    elif 161.70 < T < 184.70:
+        conversion_factor = bar_conversion(output_units)
+        logPsat = 3.80675 - 577.661 / (float(T) - 13.)
+        Psat = (10.**logPsat) * conversion_factor
+        return Psat
     else:
-        raise ValueError('Temperature out of range: 110 K < T < 160.56 K')
+        raise ValueError('Temperature out of range: 110 K < T < 184.70 K')
 
 
 def krypton_psat(T, output_units='bar'):
