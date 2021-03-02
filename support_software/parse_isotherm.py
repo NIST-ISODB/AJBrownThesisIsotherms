@@ -10,7 +10,7 @@ def check_column(dataframe, column):
     data = dataframe[column]
     if len(set(data)) > 1:
         print(data)
-        raise Exception('ERROR: column should be single-valued:\n')
+        raise Exception('ERROR: column should be single-valued: ' + column)
 
 
 def read_isotherm_flat_CSV(filename, run_id, segment_id=None):
