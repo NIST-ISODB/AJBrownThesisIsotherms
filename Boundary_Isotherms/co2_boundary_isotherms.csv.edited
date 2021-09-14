@@ -15,8 +15,8 @@ run_id,run_description,adsorbent,adsorbent_mass,adsorbent_mass_units,adsorbate,a
 1,Boundary Isotherm,Vycor Glass,61.6,mg,CO2,44.01,g/mol,K,log10(mmHg),mg,150.71,0.822,4.87,9,D,
 1,Boundary Isotherm,Vycor Glass,61.6,mg,CO2,44.01,g/mol,K,log10(mmHg),mg,150.71,0.798,4.84,4,D,
 1,Boundary Isotherm,Vycor Glass,61.6,mg,CO2,44.01,g/mol,K,log10(mmHg),mg,150.71,0.766,4.75,1,D,
-1,Boundary Isotherm,Vycor Glass,61.6,mg,CO2,44.01,g/mol,K,log10(mmHg),mg,150.71,0.736,4.60,6,D,Editor: likely typographic error in adsorption measurement
-1,Boundary Isotherm,Vycor Glass,61.6,mg,CO2,44.01,g/mol,K,log10(mmHg),mg,150.71,0.712,4.60,6,D,Editor: likely typographic error in adsorption measurement
+1,Boundary Isotherm,Vycor Glass,61.6,mg,CO2,44.01,g/mol,K,log10(mmHg),mg,150.71,0.736,4.60,6,D,Editor: likely typographic error in adsorption measurement here or in following measurement
+1,Boundary Isotherm,Vycor Glass,61.6,mg,CO2,44.01,g/mol,K,log10(mmHg),mg,150.71,0.712,4.60,6,D,Editor: likely typographic error in adsorption measurement here or in following measurement
 1,Boundary Isotherm,Vycor Glass,61.6,mg,CO2,44.01,g/mol,K,log10(mmHg),mg,150.71,0.672,4.50,7,D,
 1,Boundary Isotherm,Vycor Glass,61.6,mg,CO2,44.01,g/mol,K,log10(mmHg),mg,150.71,0.615,4.40,0,D,
 1,Boundary Isotherm,Vycor Glass,61.6,mg,CO2,44.01,g/mol,K,log10(mmHg),mg,150.71,0.568,4.26,4,D,
