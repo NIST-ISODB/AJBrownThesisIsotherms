@@ -68,7 +68,7 @@
     {
       "name": "branch",
       "type": "string",
-      "description": "Identifier for isotherm branch. Either 'A' (adsorption) or 'D' (desorption)""
+      "description": "Identifier for isotherm branch. Either 'A' (adsorption) or 'D' (desorption)"
     },
     {
       "name": "notes",
