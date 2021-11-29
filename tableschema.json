@@ -3,52 +3,72 @@
     {
       "name": "run_id",
       "type": "int",
-      "description": "Identifier of measurement block"
+      "description": "Identifier number of run"
     },
     {
-      "name": "segment",
+      "name": "segment_id",
       "type": "int",
-      "description": "Identifier of segment in sequence of measurement blocks"
+      "description": "Identification number of segment of run"
     },
     {
       "name": "run_description",
       "type": "string",
-      "description": "Description of the run or a group of segments"
+      "description": "Text description of run"
     },
     {
       "name": "segment_description",
       "type": "string",
-      "description": "Description of the segment"
+      "description": "Text description of segment"
     },
     {
       "name": "adsorbent",
       "type": "string",
-      "description": "Name of the Adsorbent Material"
+      "description": "Name of the adsorbent material"
+    },
+    {
+      "name": "adsorbent_mass",
+      "type": "float",
+      "description": "Adsorbent mass"
+    },
+    {
+      "name": "adsorbent_mass_units",
+      "type": "string",
+      "description": "Units of adsorbent mass"
     },
     {
       "name": "adsorbate",
       "type": "string",
-      "description": "Name of the Adsorbate Species"
+      "description": "Name of the adsorbate"
+    },
+    {
+      "name": "adsorbate_mass",
+      "type": "float",
+      "description": "Molecular weight of adsorbate"
+    },
+    {
+      "name": "adsorbate_mass_units",
+      "type": "float",
+      "description": "Units of molecular weight of adsorbate"
     },
     {
       "name": "temperature_units",
       "type": "string",
-      "description": "Units of temperature; K = Kelvin, C = Celsius"
+      "description": "Units of temperature measurement (K = Kelvin, C = Celsius)"
     }
     {
       "name": "temperature",
       "type": "number",
-      "description": "Temperature of the measurement in Kelvin units"
+      "description": "Temperature measurement"
     },
     {
       "name": "pressure_units",
       "type": "string",
-      "description": "Units of pressure measurements. Acceptable values: log10(mmHg), mmHg, relative"
+      "description": "Units of pressure measurements (log10(mmHg), mmHg, relative)"
     },
     {
       "name": "adsorption_units",
       "type": "string",
-      "description": "Units of adsorption measurements"
+      "description": "Units of adsorption measurement"
     },
     {
       "name": "pressure",
@@ -68,12 +88,12 @@
     {
       "name": "branch",
       "type": "string",
-      "description": "Identifier for isotherm branch. Either 'A' (adsorption) or 'D' (desorption)"
+      "description": "Branch of Isotherm (A=Adsorption, D=Desorption)"
     },
     {
       "name": "notes",
       "type": "string",
-      "description": "Comments, either taken from original data or editorial notes"
+      "description": "Comments, either from original data or editorial notes"
     }
   ]
 }
